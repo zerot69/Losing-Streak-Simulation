@@ -1,12 +1,25 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
 
-# Title: Martingale’s Strategy in Gambling: Does “Double the bet” really work?
+# Martingale’s Strategy in Gambling: Does “Double the bet” really work? - The simulation
 # Author: Vo-Hoang-Tuan Ngo (26839)
 # Rhein-Waal University of Applied Sciences
 # Date 08.01.2021
+
+
+# # Martingale’s Strategy in Gambling: Does “Double the bet” really work?
+
+# The code below simulates a 50/50 gamble and export the total amount of each losing streak in 'gameTotal' games,
+# which is inputted from the user. In each game, a number is randomized, it can be 0 or 1.
+# If the number is 0, the player lost and a losing streak is recorded.
+# Until the number 1 is randomized,which means the player wins, the streak will stop and
+# its value is stored into a list,which stores all the number of each losing streak.
+# When 'gameTotal' games are finished, a sublist of the list from losing streak of 0 to the highest losing streak is returned.
+
+
+# In[ ]:
+
 
 import random
 import matplotlib.pyplot as plt; plt.rcdefaults()
@@ -67,7 +80,9 @@ list = simulation(game)
 print("")
 print(list)
 
-# In[2]:
+
+# In[ ]:
+
 
 x_pos = [x for x in range(len(list))]
 
